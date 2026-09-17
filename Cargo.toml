@@ -1,0 +1,8 @@
+# 本仓库每题一个独立 crate：leet-0001/、leet-0002/ …
+# 这里只作为 Cargo workspace 根，用 glob 自动收纳所有 leet-* 目录：
+#   - 新增题目（新建 leet-XXXX/Cargo.toml）后无需修改任何配置
+#   - rust-analyzer 的自动项目发现会在根目录跑 cargo metadata，从而加载全部成员
+#   - 所有成员共用根目录的 target/ 与 Cargo.lock
+[workspace]
+resolver = "3"
+members = ["leet-*"]
