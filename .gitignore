@@ -1,0 +1,33 @@
+# ============ Rust / Cargo ============
+# 编译产物（匹配任意层级的 target 目录，如 leet-0001/target/）
+target/
+# 旧版 rustc 生成的调试符号
+*.pdb
+# cargo/rustfmt 生成的备份文件
+**/*.rs.bk
+
+# Cargo.lock：二进制 crate 按 cargo 约定应当提交，故此处保留跟踪。
+# 若希望仓库更精简（每题依赖都为空时可选），取消下面一行注释即可忽略所有锁文件。
+# **/Cargo.lock
+
+# ============ 编辑器 / IDE ============
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ============ 操作系统 ============
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============ 临时文件 ============
+*.tmp
+*.log
